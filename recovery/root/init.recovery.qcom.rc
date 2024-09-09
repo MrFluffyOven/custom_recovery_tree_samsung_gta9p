@@ -41,6 +41,7 @@ on fs
     mount vfat /dev/block/bootdevice/by-name/apnhlos /vendor/firmware_mnt
     # ANDROID_ROOT
     export ANDROID_ROOT /system_root
+    exec - root -- /vendor/bin/vendor_modprobe.sh
 
 on post-fs
     mkdir /mnt/vendor/efs/DAK 0775 root root
