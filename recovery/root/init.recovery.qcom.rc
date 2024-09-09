@@ -33,7 +33,7 @@ on early-init
 on init
     setprop prepdecrypt.setpatch true
     start service vendor.modprobe  
-    
+
 on boot
     start health-hal-2-1
 
@@ -61,6 +61,5 @@ service vendor.modprobe /vendor/bin/vendor_modprobe.sh
     group root root
     disabled
     stdio_to_kmsg
-    seclabel u:r:vendor_modprobe:s0
     oneshot
     seclabel u:r:recovery:s0
