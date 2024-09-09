@@ -6,6 +6,7 @@
 #=============================================================================
 
 #default to /vendor/lib/modules
+MODULES_PATH="/vendor/lib/modules/"
 GKI_MOD_PATH="/vendor/lib/modules/5.4-gki"
 
 MODPROBE="/vendor/bin/modprobe"
