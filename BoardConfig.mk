@@ -201,6 +201,7 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 TW_SKIP_ADDITIONAL_FSTAB := true
 TW_FORCE_KEYMASTER_VER := true
 TW_LOAD_VENDOR_BOOT_MODULES := true
+TW_LOAD_VENDOR_MODULES := true
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules)\")
 
 # Maintainer/Version
