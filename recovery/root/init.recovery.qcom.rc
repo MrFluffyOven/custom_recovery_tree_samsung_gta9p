@@ -28,11 +28,12 @@ import /init.recovery.qcom_decrypt.rc
 import /init.recovery.display.rc
 
 on early-init
-  start service vendor.modprobe  
+
 
 on init
     setprop prepdecrypt.setpatch true
-
+    start service vendor.modprobe  
+    
 on boot
     start health-hal-2-1
 
