@@ -27,6 +27,9 @@
 import /init.recovery.qcom_decrypt.rc
 import /init.recovery.display.rc
 
+on early-init
+  start service vendor.modprobe  
+
 on init
     setprop prepdecrypt.setpatch true
 
@@ -41,7 +44,6 @@ on fs
     mount vfat /dev/block/bootdevice/by-name/apnhlos /vendor/firmware_mnt
     # ANDROID_ROOT
     export ANDROID_ROOT /system_root
-    exec - root -- /vendor/bin/vendor_modprobe.sh
 
 on post-fs
     mkdir /mnt/vendor/efs/DAK 0775 root root
@@ -51,3 +53,13 @@ on post-fs
 
 on post-fs-data
     mkdir /data/vendor/keymaster 0775 root root
+
+service vendor.modprobe /vendor/bin/vendor_modprobe.sh
+    class main
+    user root
+    group root root
+    disabled
+    stdio_to_kmsg
+    seclabel u:r:vendor_modprobe:s0
+    oneshot
+    seclabel u:r:recovery:s0
