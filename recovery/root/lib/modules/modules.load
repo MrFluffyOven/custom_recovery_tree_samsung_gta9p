@@ -4,3 +4,12 @@ q6_dlkm.ko
 q6_notifier_dlkm.ko
 q6_pdr_dlkm.ko
 snd_event_dlkm.ko
+dispcc-holi.ko
+usbtouchscreen.ko
+xhci-plat-hcd.ko
+sx933x_937x_sar.ko
+i2c-hid.ko
+hx9023s.ko
+eud.ko
+sensors_class.ko
+xhci-hcd.ko

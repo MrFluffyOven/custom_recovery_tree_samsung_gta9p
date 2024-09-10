@@ -163,8 +163,8 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Encryption & Misc
-TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO_FBE := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
@@ -200,9 +200,10 @@ TW_INCLUDE_FASTBOOTD := true
 TW_PREPARE_DATA_MEDIA_EARLY := true
 TW_SKIP_ADDITIONAL_FSTAB := true
 TW_FORCE_KEYMASTER_VER := true
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko apr_dlkm.ko q6_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko dispcc-holi.ko usbtouchscreen.ko xhci-plat-hcd.ko sx933x_937x_sar.ko i2c-hid.ko hx9023s.ko eud.ko"
 TW_LOAD_VENDOR_BOOT_MODULES := true
-TW_LOAD_VENDOR_MODULES := true
-TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules)\")
+TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 
 # Maintainer/Version
 include $(DEVICE_PATH)/version.mk
+

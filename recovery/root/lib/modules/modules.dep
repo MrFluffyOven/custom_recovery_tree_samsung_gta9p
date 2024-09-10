@@ -4,3 +4,12 @@
 /vendor/lib/modules/apr_dlkm.ko: /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
 /vendor/lib/modules/snd_event_dlkm.ko:
 /vendor/lib/modules/adsp_loader_dlkm.ko: /vendor/lib/modules/apr_dlkm.ko /vendor/lib/modules/q6_notifier_dlkm.ko /vendor/lib/modules/q6_pdr_dlkm.ko /vendor/lib/modules/snd_event_dlkm.ko
+/vendor/lib/modules/5.4-gki/xhci-plat-hcd.ko: /vendor/lib/modules/5.4-gki/xhci-hcd.ko
+/vendor/lib/modules/5.4-gki/eud.ko:
+/vendor/lib/modules/5.4-gki/dispcc-holi.ko:
+/vendor/lib/modules/5.4-gki/sx933x_937x_sar.ko: /vendor/lib/modules/5.4-gki/sensors_class.ko
+/vendor/lib/modules/5.4-gki/hx9023s.ko: /vendor/lib/modules/5.4-gki/sensors_class.ko
+/vendor/lib/modules/5.4-gki/i2c-hid.ko:
+/vendor/lib/modules/5.4-gki/usbtouchscreen.ko:
+/vendor/lib/modules/5.4-gki/sensors_class.ko:
+/vendor/lib/modules/5.4-gki/xhci-hcd.ko:
